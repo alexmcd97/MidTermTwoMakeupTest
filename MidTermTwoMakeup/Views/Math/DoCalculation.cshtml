@@ -1,0 +1,39 @@
+@model MidTermTwoMakeup.Models.MathOperation
+
+<form asp-controller="Math" asp-action="ShowCalculationResults" class="form-horizontal" method="Post">
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome</h1>
+      <p>Enter your two operands and select a operator, and then press sumbit to see your result.</p>
+      <hr>
+      <h3>Math Form</h3>
+      </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <div class="form-group">
+            <label for="LeftOperand">First Operand</label>
+            <input type="text" class="form-control" asp-for="@Model.LeftOperand" id="LeftOperand">
+        </div>
+      </div>
+      <div class="well">
+        <label for="optradio">Operator</label><br>
+        <label class="radio-inline"><input type="radio" asp-for="@Model.Operator" value="+">Addition</label>
+        <label class="radio-inline"><input type="radio" asp-for="@Model.Operator" value="-">Subtraction</label>
+        <label class="radio-inline"><input type="radio" asp-for="@Model.Operator" value="*">Multiplication</label>        
+        <label class="radio-inline"><input type="radio" asp-for="@Model.Operator" value="/">Division</label>        
+      </div>
+      <div class="well">
+        <div class="form-group">
+            <label for="RightOperand">Second Operand</label>
+            <input type="text" class="form-control" asp-for="@Model.RightOperand" id="RightOperand">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</div>
+
+
+</form>

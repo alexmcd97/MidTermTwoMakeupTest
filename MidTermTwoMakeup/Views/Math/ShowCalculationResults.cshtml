@@ -1,0 +1,24 @@
+@model MidTermTwoMakeup.Models.MathOperation
+
+
+
+
+
+
+
+
+@ViewData["Message"]
+  
+<div class="col-sm-8 text-left"> 
+    <h1>Welcome</h1>
+    <hr>
+    <h3>Results</h3>
+    <p>The following is the result of your operation!</p>
+    <div class="well">
+        The result of @Model.LeftOperand @Model.Operator @Model.RightOperand equals @Model.Result
+    </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Thank you for using Math Operator!</p>
+</footer>
